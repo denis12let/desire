@@ -10,6 +10,73 @@
     height: 120px;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+    position: relative;
+  }
+  &__btn {
+    border: none;
+    background-color: #fff;
+    margin-left: 60px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  &__logo {
+    padding-left: 5.48%;
+  }
+}
+
+.right-menu {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  max-width: 694px;
+  width: 100%;
+  transition: all 0.7s;
+  box-shadow: -2px 3px 17px 0 #000;
+  &--close {
+    transform: translateX(200%);
+  }
+  &__close {
+    width: 26px;
+    height: 26px;
+    margin-left: 47px;
+    margin-top: 41px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__logo {
+    margin-bottom: 41px;
+    display: inline-block;
+    img {
+      width: 194px;
+      height: 58px;
+    }
+  }
+  &__title {
+    @extend %title-font;
+    font-size: 36px;
+    height: 72px;
+    margin-bottom: 7px;
+  }
+  &__text {
+    @extend %text-font;
+    font-size: 16px;
+    max-width: 483px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 75px;
   }
 }
 
@@ -18,18 +85,12 @@
   flex: 0 0 auto;
 }
 
-.header__btn {
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-}
-
 .menu {
   &__list {
     display: flex;
     gap: 80px;
   }
-  padding-right: 60px;
+
   &__list-link {
     @extend %title-font;
     color: rgba(54, 56, 56, 0.9);
@@ -38,10 +99,134 @@
 
 .footer {
   &__content {
-    background-color: #707070;
+    background-color: #dfdfdf;
     padding: 61px 0 80px;
+    max-height: 342px;
   }
-
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info-title {
+    @extend %title-font;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 14px;
+  }
+  &__info-text {
+    @extend %text-font;
+    font-size: 16px;
+    color: $title;
+    max-width: 475px;
+    margin-bottom: 16px;
+  }
+  &__info-email {
+    display: inline-block;
+    @extend %text-font;
+    font-size: 14px;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 22px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url(../images/footer/envelope.svg);
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 16px;
+      height: 12px;
+    }
+  }
+  &__info-form {
+    display: flex;
+    gap: 9px;
+    max-width: 540px;
+    height: 40px;
+    width: 100%;
+  }
+  &__form-input {
+    max-width: 538px;
+    width: 100%;
+    border-radius: 21px;
+    border: 1px solid #383636;
+    background-color: #dfdfdf;
+    opacity: 0.7;
+    padding: 6px 10px 6px 18px;
+    &::placeholder {
+      @extend %text-font;
+      font-size: 16px;
+      font-weight: 400;
+      color: #a1a1a1;
+    }
+  }
+  &__form-button {
+    max-width: 160px;
+    width: 100%;
+    background-color: $black;
+    @extend %text-font;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fffff0;
+    border-radius: 21px;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__social-link {
+    @extend %text-font;
+    color: #707070;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    padding-left: 28px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__social-link--facebook::before {
+    background-image: url('../images/footer/facebook.svg');
+  }
+  &__social-link--instagram::before {
+    background-image: url('../images/footer/instagram.svg');
+    width: 14px;
+    height: 14px;
+  }
+  &__social-link--pinterst::before {
+    background-image: url('../images/footer/Pinterest.svg');
+  }
+  &__social-link--whatsapp::before {
+    background-image: url('../images/footer/whatsapp.svg');
+    width: 14px;
+    height: 14px;
+  }
+  &__social-link--youtube::before {
+    background-image: url('../images/footer/youtube.svg');
+    width: 18px;
+    height: 12px;
+  }
+  &__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__menu-link {
+    @extend %text-font;
+    font-size: 14px;
+    font-weight: 600;
+    color: #707070;
+  }
   &__copyright {
     text-align: center;
     background-color: $black;
