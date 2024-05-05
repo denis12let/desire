@@ -5,4 +5,10 @@ $(function () {
   $('.right-menu__close').on('click', function () {
     $('.right-menu').addClass('right-menu--close');
   });
+  $('.top__slider').slick({
+    dots: true,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+  });
 });
