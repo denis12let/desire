@@ -1,0 +1,128 @@
+.header {
+  &__inner {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    padding-left: 32px;
+  }
+
+  &__btn {
+    border: none;
+    background-color: #fff;
+    margin-left: 60px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    padding-left: 5.48%;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    gap: 80px;
+  }
+
+  &__list-link {
+    @extend %title-font;
+    color: rgba(54, 56, 56, 0.9);
+  }
+  &__list-link--active {
+    position: relative;
+    padding-bottom: 4px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $black;
+      opacity: 0.7;
+    }
+  }
+}
+
+.right-menu {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  max-width: 694px;
+  width: 100%;
+  transition: all 0.7s;
+  box-shadow: -2px 3px 17px 0 #000;
+
+  &--close {
+    transform: translateX(200%);
+  }
+
+  &__close {
+    width: 26px;
+    height: 26px;
+    margin-left: 47px;
+    margin-top: 41px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 41px;
+
+    img {
+      width: 194px;
+      height: 58px;
+    }
+  }
+
+  &__title {
+    @extend %title-font;
+    font-size: 36px;
+    // height: 72px;
+    margin-bottom: 17px;
+    padding-bottom: 17px;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      max-width: 252px;
+      width: 100%;
+      height: 1px;
+      background: #6d7278;
+    }
+  }
+
+  &__text {
+    @extend %text-font;
+    font-size: 16px;
+    max-width: 483px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 75px;
+  }
+}

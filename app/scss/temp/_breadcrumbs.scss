@@ -1,0 +1,21 @@
+.breadcrumbs {
+  padding: 13px 14px;
+  background: rgba(#dfdfdf.5);
+  &__list {
+    display: flex;
+  }
+  &__link {
+    @extend %text-font;
+    font-size: 14px;
+    color: $title;
+    position: relative;
+    &::after {
+      content: '/';
+      margin-left: -4px;
+      margin-right: 4px;
+    }
+  }
+  &__item:last-child a::after {
+    display: none;
+  }
+}
