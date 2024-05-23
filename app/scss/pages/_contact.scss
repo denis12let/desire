@@ -1,0 +1,128 @@
+.map {
+  margin-top: -53px;
+}
+
+.contact {
+  padding: 55px 0 102px;
+  &__title {
+    @extend %title-font;
+    color: $black;
+    font-size: 36px;
+    max-width: 830px;
+    margin-bottom: 23px;
+    padding-bottom: 33px;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #6d7278;
+      width: 200px;
+      height: 2px;
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  &__social-link {
+    @extend %text-font;
+    color: #707070;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    padding-left: 28px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__content {
+    padding-left: 285px;
+  }
+  &__social-link--facebook::before {
+    background-image: url('../../images/footer/facebook.svg');
+  }
+
+  &__social-link--instagram::before {
+    background-image: url('../../images/footer/instagram.svg');
+    width: 14px;
+    height: 14px;
+  }
+
+  &__social-link--pinterst::before {
+    background-image: url('../../images/footer/Pinterest.svg');
+  }
+
+  &__social-link--whatsapp::before {
+    background-image: url('../../images/footer/whatsapp.svg');
+    width: 14px;
+    height: 14px;
+  }
+
+  &__social-link--youtube::before {
+    background-image: url('../../images/footer/youtube.svg');
+    width: 18px;
+    height: 12px;
+  }
+  &__text {
+    @extend %text-font;
+    color: #a1a1a1;
+    margin-bottom: 10px;
+  }
+  &__data {
+    color: $title;
+    margin-bottom: 16px;
+  }
+  &__data-phone {
+    color: $title;
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__form-input {
+    @extend %text-font;
+    max-width: 407px;
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    border-radius: 20px;
+    height: 40px;
+    margin-bottom: 13px;
+    padding: 6px 17px;
+    color: #a1a1a1;
+  }
+  &__form-area {
+    @extend %text-font;
+    width: 100%;
+    height: 125px;
+    border: 1px solid #dfdfdf;
+    border-radius: 24px;
+    color: #a1a1a1;
+    padding: 14px 17px;
+    resize: none;
+    margin-bottom: 20px;
+  }
+  &__form-btn {
+    max-width: 181px;
+    width: 100%;
+    height: 40px;
+    border-radius: 21px;
+    border: none;
+    outline: none;
+    background-color: $black;
+
+    @extend %title-font;
+    font-weight: 500;
+    text-align: center;
+    color: #fffff0;
+  }
+}

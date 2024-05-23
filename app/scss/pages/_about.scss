@@ -18,6 +18,7 @@
   }
   &__title {
     @extend %title-font;
+    color: $black;
     font-size: 36px;
     max-width: 830px;
     margin-bottom: 23px;
