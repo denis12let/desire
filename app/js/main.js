@@ -11,6 +11,10 @@ $(function () {
     fade: true,
     autoplay: true,
   });
+  $('.blog__img-list').slick({
+    prevArrow: '<button class="blog__btn-leftArr" type="button"></button>',
+    nextArrow: '<button class="blog__btn-rightArr" type="button"></button>',
+  });
   Fancybox.bind('[data-fancybox]', {});
   var mixer = mixitup('.gallery__inner', {
     load: { filter: '.living-room' },
